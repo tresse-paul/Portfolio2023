@@ -29,7 +29,7 @@
     display: flex;
     overflow: hidden;
     height: 32px;
-    padding: 3px 12px 2px;
+    padding: 5px 12px 2px;
     justify-content: center;
     align-items: center;
     flex: 0 0 auto;
@@ -43,7 +43,18 @@
     line-height: 1;
     text-align: center;
     text-transform: uppercase;
-}  
+}
+
+.presentation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
 
 /* NAVIGATION */
 .nav {
@@ -154,7 +165,7 @@ svg {
 
 .button.mode {
     display: flex;
-    padding-top: 2px;
+    padding-top: 5px;
     padding-bottom: 2px;
     justify-content: center;
     justify-items: start;
@@ -273,8 +284,6 @@ svg {
 .hero-wrapper {
     display: flex;
     justify-content: center;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 3%;
 }
@@ -755,6 +764,46 @@ svg {
     margin: auto;
 }
 
+.projet-header {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.projet-h1 {
+    position: sticky;
+    top: 128px;
+    z-index: 2;
+    margin-bottom: 0;
+    padding-top: 128px;
+    padding-bottom: 32px;
+    text-transform: none;
+}
+
+.projet-header-main {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-height: 150vh;
+    margin-top: 64px;
+    border-radius: 32px;
+    object-fit: cover;
+}
+
+.projet-header-overlay {
+    position: absolute;
+    left: 0;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    width: 100%;
+    max-height: 150vh;
+    border-radius: 32px;
+    object-fit: cover;
+}
+
 @media screen and (max-width: 991px) {
     h1 {
             font-size: 12vw
@@ -1093,6 +1142,22 @@ svg {
         margin-right: 0.5em;
         border-radius: 8px;
     }
+
+    .projet-header-main {
+        width: 100vw;
+        max-width: none;
+        margin-left: -32px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .projet-header-overlay {
+        width: 100vw;
+        max-width: none;
+        margin-left: -32px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
 }
 
 @media screen and (max-width: 479px) {
@@ -1208,5 +1273,14 @@ svg {
 
     .intro-img {
         height: 13vw;
+    }
+
+    .projet-header-main {
+        margin-top: 32px;
+        margin-left: -24px;
+    }
+
+    .projet-header-overlay {
+        margin-left: -24px;
     }
 }

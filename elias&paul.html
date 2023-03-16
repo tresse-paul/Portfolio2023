@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style/base.css">
+    <link rel="stylesheet" href="assets/style/font.css">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <script>
+        if (localStorage.getItem('light-mode') !== null) {
+            document.documentElement.classList.add("light-mode");
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="grain">
+        <div class="grain-texture"></div>
+    </div>
+    <div class="page-transition"></div>
+    <!-- Curseur -->
+    <div class="cursor"></div>
+    <!-- HEADER -->
+    <header class="nav">
+        <div class="container nav-container">
+            <a href="/" class="nav-logo" spellcheck="false">
+                <div class="nav-logo-svg">
+                    <?xml version="1.0" encoding="UTF-8"?><svg class id="Calque_2" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 1722 1722">
+                        <g id="Logo_Black">
+                            <path
+                                d="m447.72,739.8v603.36h-68.88v-447.72H0v692.63c0,73.97,59.96,133.93,133.93,133.93h558.69c73.97,0,133.93-59.96,133.93-133.93l-.03-937.07c0,69-87.53,88.8-133.91,88.8h-244.91Z"
+                                class="U" />
+                            <path
+                                d="m692.63,0H0v826.56h378.84v-137.76h313.79c73.25,0,132.76-58.82,133.9-131.8.01-.71.03-1.42.03-2.13V133.93C826.56,59.96,766.6,0,692.63,0Zm-244.91,378.84h-68.88v-68.88h68.88v68.88Z"
+                                class="P" />
+                            <path
+                                d="m1029.37,0c-73.97,0-133.93,59.96-133.93,133.93v692.63h378.84v-137.76h68.88v585.48s378.84,0,378.84,0V133.93c0-73.97-59.96-133.93-133.93-133.93h-558.69Zm313.79,378.84h-68.88v-68.88h68.88v68.88Z"
+                                class="A" />
+                            <polygon
+                                points="1722 1722 1722 1343.16 1274.04 1343.16 1274.04 895.44 895 895.44 895 1722 1722 1722"
+                                class="L" />
+                        </g>
+                    </svg>
+                </div>
+            </a>
+            <nav class="nav-menu">
+                <div class="nav-menu-grid">
+                    <nav class="nav-menu-item-wrapper">
+                        <a class="button nav-button" href="mailto:paul.tresse.pro@gmail.com">Email</a>
+                        <a class="button mode desktop">
+                            <div class="mode-overflow">
+                                <div class="mode-text">Sombre ▲</div>
+                                <div class="mode-text">Clair ▼</div>
+                            </div>
+                        </a>
+                    </nav>
+                    <nav class="nav-menu-item-wrapper">
+                        <a href="/projets.html" class="button nav-button">Projets</a>
+                        <a href="/apropos.html" class="button nav-button">À propos</a>
+                        <a href="/contact.html" class="button nav-button">Contact</a>
+                    </nav>
+                </div>
+            </nav>
+            <div class="nav-mobile-wrapper">
+                <a class="button mode mobile">
+                    <div class="mode-overflow">
+                        <div class="mode-text">Sombre ▲</div>
+                        <div class="mode-text">Clair ▼</div>
+                    </div>
+                </a>
+                <div class="menu-button">
+                    <a class="button mobile-button">
+                        <div class="mobile-button-text">Menu</div>
+                        <div class="mobile-button-text">Fermer</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="nav-background"></div>
+        <div class="w-nav-overlay">
+            <nav class="nav-menu-mobile">
+                <div class="nav-menu-grid-mobile">
+                    <nav class="nav-menu-item-wrapper-mobile">
+                        <a href="/projets.html" class="button nav-button">Projets</a>
+                        <a href="/apropos.html" class="button nav-button">À propos</a>
+                        <a href="/contact.html" class="button nav-button">Contact</a>
+                    </nav>
+                    <nav class="nav-menu-item-wrapper-mobile">
+                        <a class="button nav-button" href="mailto:paul.tresse.pro@gmail.com">Email</a>
+                    </nav>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- CONTENU -->
+    <main>
+        <div class="container">
+            <div class="projet-header">
+                <h1 class="projet-h1">Elias & Paul</h1>
+                <img src="" alt="" class="projet-header-main">
+                <img src="" alt="" class="projet-header-overlay">
+            </div>
+        </div>
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="section-title">
+                <div class="section-title-labels footer-title">
+                    <div class="label email">Prendre contact</div>
+                    <div class="label email">cliquer pour copier</div>
+                    <div class="label email">Copier 👍🏻</div>
+                </div>
+                <a onclick="copyToClipBoard('#footer-email')" class="footer-email-wrapper">
+                    <h4 class="footer-email-h4">
+                        <span id="footer-email">paul.tresse.pro@gmail.com</span>
+                    </h4>
+                    <div class="footer-email-border"></div>
+                </a>
+            </div>
+            <div class="layout-grid smallprints-grid">
+                <div class="footer-smallprints n1">
+                    <div class="label smallprint">Paul Tresse © 2023</div>
+                </div>
+                <div class="footer-smallprints n2">
+                    <div class="label smallprint">Design & Dev - Paul Tresse</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<!-- Fonction scroll fluide -->
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
+<!-- Jquery -->
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+    crossorigin="anonymous"></script>
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+<script src="assets/script/main.js"></script>
+
+</html>
