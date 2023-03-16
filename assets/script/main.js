@@ -229,17 +229,6 @@ function moveCircle(e) {
   });
 }
 
-$(".p1").hover(function () {
-  $(".cursor-hover-img").css({
-    "background-image": "url(/assets/media/images/Architecture1.jpg)",
-  });
-});
-$(".p2").hover(function () {
-  $(".cursor-hover-img").css({
-    "background-image": "url(/assets/media/images/Architecture2.jpg)",
-  });
-});
-
 $($overlayImg).mousemove(function () {
   TweenLite.set($cursorHover, {
     height: "4OOpx",
@@ -286,15 +275,12 @@ $($tiltBox).mousemove(function (e) {
     willChange: "transform",
     rotateY: $xPos * 16,
     transformStyle: "preserve-3d",
-
-    ease: Power4.easeInOut,
   });
 
   gsap.to($motionImg, {
     translateX: $xPos * -70,
     transformStyle: "preserve-3d",
     willChange: "transform",
-    ease: Power4.easeInOut,
   });
 });
 
@@ -306,15 +292,12 @@ $($tiltBox).mouseout(function (e) {
     willChange: "transform",
     rotateY: 0,
     transformStyle: "preserve-3d",
-
-    ease: Power4.easeInOut,
   });
 
   gsap.to($motionImg, {
     translateX: 0,
     transformStyle: "preserve-3d",
     willChange: "transform",
-    ease: Power4.easeInOut,
   });
 });
 
