@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style/base.css">
+    <link rel="stylesheet" href="assets/style/font.css">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <script>
+        if (localStorage.getItem('light-mode') !== null) {
+            document.documentElement.classList.add("light-mode");
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="grain">
+        <div class="grain-texture"></div>
+    </div>
+    <div class="page-transition"></div>
+    <!-- Curseur -->
+    <div class="cursor"></div>
+    <!-- HEADER -->
+    <header class="nav">
+        <div class="container nav-container">
+            <a href="/" class="nav-logo" spellcheck="false">
+                <div class="nav-logo-svg">
+                    <?xml version="1.0" encoding="UTF-8"?><svg class id="Calque_2" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 1722 1722">
+                        <g id="Logo_Black">
+                            <path
+                                d="m447.72,739.8v603.36h-68.88v-447.72H0v692.63c0,73.97,59.96,133.93,133.93,133.93h558.69c73.97,0,133.93-59.96,133.93-133.93l-.03-937.07c0,69-87.53,88.8-133.91,88.8h-244.91Z"
+                                class="U" />
+                            <path
+                                d="m692.63,0H0v826.56h378.84v-137.76h313.79c73.25,0,132.76-58.82,133.9-131.8.01-.71.03-1.42.03-2.13V133.93C826.56,59.96,766.6,0,692.63,0Zm-244.91,378.84h-68.88v-68.88h68.88v68.88Z"
+                                class="P" />
+                            <path
+                                d="m1029.37,0c-73.97,0-133.93,59.96-133.93,133.93v692.63h378.84v-137.76h68.88v585.48s378.84,0,378.84,0V133.93c0-73.97-59.96-133.93-133.93-133.93h-558.69Zm313.79,378.84h-68.88v-68.88h68.88v68.88Z"
+                                class="A" />
+                            <polygon
+                                points="1722 1722 1722 1343.16 1274.04 1343.16 1274.04 895.44 895 895.44 895 1722 1722 1722"
+                                class="L" />
+                        </g>
+                    </svg>
+                </div>
+            </a>
+            <nav class="nav-menu">
+                <div class="nav-menu-grid">
+                    <nav class="nav-menu-item-wrapper">
+                        <a class="button nav-button" href="mailto:paul.tresse.pro@gmail.com">Email</a>
+                        <a class="button mode desktop">
+                            <div class="mode-overflow">
+                                <div class="mode-text">Sombre ▲</div>
+                                <div class="mode-text">Clair ▼</div>
+                            </div>
+                        </a>
+                    </nav>
+                    <nav class="nav-menu-item-wrapper">
+                        <a href="/projets.html" class="button nav-button">Projets</a>
+                        <a href="/apropos.html" class="button nav-button">À propos</a>
+                        <a href="/contact.html" class="button nav-button">Contact</a>
+                    </nav>
+                </div>
+            </nav>
+            <div class="nav-mobile-wrapper">
+                <a class="button mode mobile">
+                    <div class="mode-overflow">
+                        <div class="mode-text">Sombre ▲</div>
+                        <div class="mode-text">Clair ▼</div>
+                    </div>
+                </a>
+                <div class="menu-button">
+                    <a class="button mobile-button">
+                        <div class="mobile-button-text">Menu</div>
+                        <div class="mobile-button-text">Fermer</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="nav-background"></div>
+        <div class="w-nav-overlay">
+            <nav class="nav-menu-mobile">
+                <div class="nav-menu-grid-mobile">
+                    <nav class="nav-menu-item-wrapper-mobile">
+                        <a href="/projets.html" class="button nav-button">Projets</a>
+                        <a href="/apropos.html" class="button nav-button">À propos</a>
+                        <a href="/contact.html" class="button nav-button">Contact</a>
+                    </nav>
+                    <nav class="nav-menu-item-wrapper-mobile">
+                        <a class="button nav-button" href="mailto:paul.tresse.pro@gmail.com">Email</a>
+                    </nav>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- CONTENU -->
+    <main>
+        <div class="header template-header">
+            <div class="container">
+                <div class="projet-header">
+                    <h1 class="projet-h1 ">Alpha-Getti</h1>
+                    <img src="/assets/media/images/Alpha-getti/tin-can-mockup_main.jpg" alt="" class="projet-header-main">
+                    <img src="/assets/media/images/Alpha-getti/tin-can-mockup_overlay.png" alt="" class="projet-header-overlay">
+                </div>
+            </div>
+        </div>
+        <section class="section large-section">
+            <div class="container">
+                <div class="section-title no-margin">
+                    <div class="projets-label margin-large">
+                        <div class="label">Projet étudiant</div>
+                        <div class="svg-frame-polygon projets-card-meta-frame">
+                            <svg width="16" height="8" viewBox="0 0 16 8" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 4L-8.26528e-07 8L-4.76837e-07 -6.99382e-07L16 4Z"></path>
+                            </svg>
+                        </div>
+                        <div class="label">Packaging</div>
+                    </div>
+                    <div class="paragraph-wrapper">
+                        <p class="page-paragraph">Alpha-Getti est un produit de la marque Heinz, composé de pâtes en forme de lettres mélangées à une sauce tomate. Cette
+                        recette simple et facile à préparer offre une présentation ludique et attrayante pour les enfants. Il est clair que ce
+                        produit est destiné à un jeune public.
+                        Dans le cadre de ce projet, l'objectif est de concevoir une nouvelle étiquette pour cette boîte de conserve.</p>
+                    </div>
+                </div>
+                <div class="projet-info">
+                    <div class="projet-info-wrapper">
+                        <h4>Client
+                            <h4 />
+                            <div class="info-label">Vanier College</div>
+                    </div>
+                    <div class="projet-info-wrapper">
+                        <h4>Année
+                            <h4 />
+                            <div class="info-label">2022</div>
+                    </div>
+                    <div class="projet-info-wrapper">
+                        <h4>Outils
+                            <h4 />
+                            <div class="info-tools">
+                                <div class="tool-wrapper">
+                                    <img class="tool-img" src="assets/media/icons/illustrateur.png" alt="">
+                                </div>
+                                <div class="tool-wrapper">
+                                    <img class="tool-img" src="assets/media/icons/photoshop.png" alt="">
+                                </div>
+                                <div class="tool-wrapper">
+                                    <img class="tool-img" src="assets/media/icons/indesign.png" alt="">
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section large-section">
+            <div class="container">
+                <div class="presentation" id="pres1">
+                    <div class="presentation-title">
+                        <h3>Croquis</h3>
+                    </div>
+                    <div class="presentation-wrapper">
+                        <div class="presentation-img-wrapper _1">
+                            <img src="assets/media/images/Alpha-getti/Alpha_getti_sketchs.jpg" alt="" class="presentation-img">
+                        </div>
+                        <div class="presentation-paragraph-wrapper">
+                            <p class="presentation-paragraph">Après avoir analysé l'étiquette originale, il est temps de commencer à concevoir les premières ébauches. J'ai choisi de
+                            conserver l'essence du produit, qui repose sur les pâtes en forme de lettres et la sauce tomate.
+                            
+                            Pour cela, j'ai décidé de décomposer le nom en séparant le mot "Alpha" avec une texture de pâtes type spaghettis, tandis
+                            que le reste du nom sera écrit en rouge vif pour rappeler la couleur de la sauce. Les éléments graphiques comprendront
+                            des illustrations 2D de lettres en texture de pâte, ainsi que des taches rouges pour évoquer la sauce.
+                            
+                            Ces choix graphiques visent à souligner l'aspect ludique et amusant du produit, tout en permettant une identification
+                            facile et rapide de la marque et de son contenu pour le public cible.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="presentation" id="pres2">
+                    <div class="presentation-title">
+                        <h3>Etiquette</h3>
+                    </div>
+                    <div class="presentation-wrapper">
+                        <div class="presentation-img-wrapper _2">
+                            <img src="assets/media/images/Alpha-getti/etiquette.jpg" alt="" class="presentation-img">
+                        </div>
+                        <div class="presentation-paragraph-wrapper">
+                            <p class="presentation-paragraph">La mise en page de l'étiquette est une phase cruciale et complexe de la conception. Tout d'abord, il est essentiel de
+                            conserver tous les éléments textuels nécessaires, tels que le tableau nutritionnel et la liste des ingrédients. Ensuite,
+                            il est temps de se concentrer sur le design.
+                            
+                            Pour cette étiquette, j'ai décidé de placer le nom "Alpha-Getti" au centre de l'étiquette, entouré de lettres et de
+                            taches de sauce, tout en veillant à laisser des espaces vides pour éviter de surcharger l'étiquette. L'objectif est de
+                            créer une étiquette facilement identifiable et compréhensible, tout en lui donnant un aspect nouveau et attractif.
+                            
+                            Il est important de souligner que la mise en page doit être réfléchie de manière à faciliter la lecture et la
+                            compréhension de l'ensemble des informations présentes sur l'étiquette, tout en mettant en valeur les éléments clés tels
+                            que le nom du produit et les images ludiques rappelant les lettres en pâte et la sauce.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="parallax-wrapper">
+                <div class="presentation-title">
+                    <h3>Poster</h3>
+                </div>
+                <div class="parallax-projet">
+                    <img class="parallax-img" src="assets/media/images/Alpha-getti/Alpha_getti_Poster.jpg" alt="">
+                </div>
+                <div class="paragraph-wrapper padding max-w">
+                    <p class="paragraph-parallax">La création du poster était un travail supplémentaire important, car il s'agissait de mettre en avant le nouveau visuel
+                    de l'étiquette. Pour ce faire, j'ai décidé de réutiliser les éléments clés de l'étiquette en les agençant différemment.
+                    
+                    Au centre du poster, on peut voir une conserve plongée dans la sauce et les pâtes, rappelant la texture et les saveurs
+                    du produit. Le titre, "New look same great taste" ("Nouveau look, même goût"), est mis en valeur par sa couleur et son
+                    épaisseur, créant un contraste visuel attractif.
+                    
+                    L'objectif de ce poster est de mettre en avant les changements apportés à l'étiquette tout en soulignant que la recette
+                    reste inchangée. Il doit inciter les consommateurs à découvrir la nouvelle présentation du produit tout en leur offrant
+                    l'assurance que la qualité gustative est toujours au rendez-vous.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="presentation-title">
+                    <h3>Avant & après</h3>
+                </div>
+                <div class="layout-grid photo-projet-list">
+                    <div class="layout-grid photo-projet-list-grid">
+                        <div id="_1" class="photo-projet-image-wrapper _1">
+                            <img class="photo-projet-image" src="assets/media/images/Alpha-getti/Alpha_getti_original_can.jpg" alt="">
+                        </div>
+                        <div id="_2" class="photo-projet-image-wrapper _2">
+                            <img class="photo-projet-image" src="assets/media/images/Alpha-getti/Alpha_getti_Poster.jpg" alt="">
+                        </div>
+                        <div id="_3" class="photo-projet-image-wrapper _3">
+                            <img class="photo-projet-image" src="assets/media/images/Alpha-getti/tin-can-mockup_02.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="section-title">
+                <div class="section-title-labels footer-title">
+                    <div class="label email">Prendre contact</div>
+                    <div class="label email">cliquer pour copier</div>
+                    <div class="label email">Copier 👍🏻</div>
+                </div>
+                <a onclick="copyToClipBoard('#footer-email')" class="footer-email-wrapper">
+                    <h4 class="footer-email-h4">
+                        <span id="footer-email">paul.tresse.pro@gmail.com</span>
+                    </h4>
+                    <div class="footer-email-border"></div>
+                </a>
+            </div>
+            <div class="layout-grid smallprints-grid">
+                <div class="footer-smallprints n1">
+                    <div class="label smallprint">Paul Tresse © 2023</div>
+                </div>
+                <div class="footer-smallprints n2">
+                    <div class="label smallprint">Design & Dev - Paul Tresse</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<!-- Fonction scroll fluide -->
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
+<!-- Jquery -->
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+    crossorigin="anonymous"></script>
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Draggable.min.js"></script>
+<script src="assets/script/main.js"></script>
+
+</html>

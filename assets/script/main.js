@@ -277,7 +277,8 @@ $(".p1").hover(function () {
 });
 $(".p2").hover(function () {
   $(".cursor-hover-img").css({
-    "background-image": "url(/assets/media/images/Architecture2.jpg)",
+    "background-image":
+      "url(/assets/media/images/Alpha-getti/Alpha_getti_mockup.jpg)",
     "border-radius": "16px",
   });
 });
