@@ -915,6 +915,9 @@ svg {
 
 .presentation-title {
     padding-bottom: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .presentation-wrapper {
@@ -957,7 +960,7 @@ svg {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 80px;
     width: 100%;
     height: 100%;
 }
@@ -985,6 +988,75 @@ svg {
 
 .paragraph-parallax {
     text-align: center;
+}
+
+.photo-projet-list {
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 10%;
+    justify-content: center;
+    justify-items: center;
+    align-items: start;
+    align-content: center;
+    grid-column-gap: 100px;
+    grid-row-gap: 24px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.w-layout-grid {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-row-gap: 16px;
+    grid-column-gap: 16px;
+}
+
+.photo-projet-list-grid {
+    grid-row-gap: 0px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    perspective: 1200px;
+}
+
+.photo-projet-image-wrapper {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-height: 90vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 32px;
+    backface-visibility: hidden;
+    perspective: 1200px;
+    transform: perspective(1200px);
+}
+
+.photo-projet-image-wrapper._1 {
+    z-index: 1;
+    width: 90%;
+}
+
+.photo-projet-image-wrapper._2 {
+    z-index: 1;
+    width: 85%;
+    transform: translate3d(100px, 0px, 24px) perspective(1200px);
+    transform-style: preserve-3d;
+}
+
+.photo-projet-image-wrapper._3 {
+    z-index: 1;
+    width: 60%;
+}
+
+.photo-projet-image {
+    position: relative;
+    width: 100%;
+    flex: 0 0 auto;
+    object-fit: contain;
 }
 
 @media screen and (max-width: 991px) {
@@ -1232,6 +1304,14 @@ svg {
         display: flex;
         flex-wrap: nowrap;
     }
+
+    .paragraph-parallax {
+        text-align: left;
+    }
+
+    .photo-projet-list {
+        grid-column-gap: 32px;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -1402,6 +1482,30 @@ svg {
     .info-tools {
         gap: 20px;
     }
+
+    .photo-projet-list {
+        grid-column-gap: 16px;
+        grid-row-gap: 16px;
+    }
+
+    .photo-projet-list-grid {
+        grid-row-gap: 30px;
+    }
+
+    .photo-projet-image-wrapper._1 {
+        width: 100%;
+        height: 100%;
+    }
+
+    .photo-projet-image-wrapper._2 {
+        width: 100%;
+        transform: translate3d(0px, 0px, 24px) perspective(1200px);
+    }
+
+    .photo-projet-image-wrapper._3 {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 @media screen and (max-width: 479px) {
@@ -1545,5 +1649,9 @@ svg {
 
     .info-tools {
         gap: 10px;
+    }
+
+    .photo-projet-list {
+        grid-column-gap: 16px;
     }
 }

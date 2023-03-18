@@ -362,13 +362,13 @@ image1Scroller.fromTo(
   {
     willChange: "transform",
     transform:
-      "translate3d(-100%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(10deg) skew(0deg, 0deg)",
+      "translate3d(-100%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(10deg) skew(0deg, 0deg)",
     transformStyle: "preserve-3d",
   },
   {
     willChange: "transform",
     transform:
-      "translate3d(0%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
+      "translate3d(0%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
     transformStyle: "preserve-3d",
   }
 );
@@ -390,13 +390,13 @@ image2Scroller.fromTo(
   {
     willChange: "transform",
     transform:
-      "translate3d(-100%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(10deg) skew(0deg, 0deg)",
+      "translate3d(-100%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(10deg) skew(0deg, 0deg)",
     transformStyle: "preserve-3d",
   },
   {
     willChange: "transform",
     transform:
-      "translate3d(0%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
+      "translate3d(0%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
     transformStyle: "preserve-3d",
   }
 );
@@ -417,14 +417,65 @@ imageParallax.fromTo(
   ".parallax-img",
   {
     willChange: "transform",
-    transform:
-      "translate3d(0%, -8%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
+    y: "-8%",
     transformStyle: "preserve-3d",
   },
   {
     willChange: "transform",
-    transform:
-      "translate3d(0%, 8%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
+    y: "8%",
     transformStyle: "preserve-3d",
   }
 );
+
+// Gallery animée
+let mm = gsap.matchMedia();
+
+mm.add("(min-width: 768px)", () => {
+  const photoGallery = gsap.timeline({
+    ease: Power1.easeOut,
+    scrollTrigger: {
+      trigger: "#_1",
+      start: "top 100%",
+      scrub: true,
+      end: "bottom 0%",
+    },
+  });
+
+  photoGallery.fromTo(
+    "#_1",
+    {
+      willChange: "transform",
+      y: "20%",
+      transformStyle: "preserve-3d",
+    },
+    {
+      willChange: "transform",
+      y: "-10%",
+      transformStyle: "preserve-3d",
+    }
+  );
+
+  const photoGallery2 = gsap.timeline({
+    ease: Power1.easeOut,
+    scrollTrigger: {
+      trigger: "#_3",
+      start: "top 100%",
+      scrub: true,
+      end: "bottom 0%",
+    },
+  });
+
+  photoGallery2.fromTo(
+    "#_3",
+    {
+      willChange: "transform",
+      y: "-30%",
+      transformStyle: "preserve-3d",
+    },
+    {
+      willChange: "transform",
+      y: "10%",
+      transformStyle: "preserve-3d",
+    }
+  );
+});
