@@ -338,15 +338,19 @@ function copyToClipBoard(element) {
   $temp.remove();
 }
 
-// div animation avec ScrollTrigger
+// div animation avec ScrollTrigger sur les card de presentation projet
 
 gsap.registerPlugin(ScrollTrigger);
 
+let imageTrigger = gsap.utils.toArray(".presentation-img-wrapper");
+let wrapperTrigger = gsap.utils.toArray(".presentation");
+
+// 1er carte
 const image1Scroller = gsap.timeline({
   paused: true,
   ease: Power1.easeOut,
   scrollTrigger: {
-    trigger: "#pres1",
+    trigger: wrapperTrigger[0],
     start: "top 60%",
     scrub: true,
     end: "top 10%",
@@ -354,11 +358,11 @@ const image1Scroller = gsap.timeline({
 });
 
 image1Scroller.fromTo(
-  ".presentation-img-wrapper._1",
+  imageTrigger[0],
   {
     willChange: "transform",
     transform:
-      "translate3d(30%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(10deg) skew(0deg, 0deg)",
+      "translate3d(-100%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(10deg) skew(0deg, 0deg)",
     transformStyle: "preserve-3d",
   },
   {
@@ -369,11 +373,12 @@ image1Scroller.fromTo(
   }
 );
 
+//2ème carte
 const image2Scroller = gsap.timeline({
   paused: true,
   ease: Power1.easeOut,
   scrollTrigger: {
-    trigger: "#pres2",
+    trigger: wrapperTrigger[1],
     start: "top 60%",
     scrub: true,
     end: "top 10%",
@@ -381,11 +386,11 @@ const image2Scroller = gsap.timeline({
 });
 
 image2Scroller.fromTo(
-  ".presentation-img-wrapper._2",
+  imageTrigger[1],
   {
     willChange: "transform",
     transform:
-      "translate3d(-30%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(10deg) skew(0deg, 0deg)",
+      "translate3d(-100%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(10deg) skew(0deg, 0deg)",
     transformStyle: "preserve-3d",
   },
   {
