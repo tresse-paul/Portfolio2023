@@ -1202,6 +1202,10 @@ svg {
         font-size: 5vw;
     }
 
+    .hero-card {
+        border-radius: 16px;
+    }
+
     .hero-card-title {
         max-width: none;
     }
