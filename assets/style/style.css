@@ -901,6 +901,8 @@ svg {
 .presentation-img-wrapper {
     width: 100%;
     height: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 .presentation-img {
@@ -915,11 +917,13 @@ svg {
 }
 
 .presentation-paragraph-wrapper {
-    max-width: 600px;
+    max-width: 800px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     width: 100%;
+    position: relative;
+    z-index: 0;
 }
 
 @media screen and (max-width: 991px) {
