@@ -53,8 +53,6 @@
     width: 100%;
     height: auto;
     padding-bottom: 64px;
-    padding-top: 64px;
-    max-width: 1920px;
 }
 
 /* NAVIGATION */
@@ -905,7 +903,6 @@ svg {
 
 .presentation-img {
     width: 100%;
-    height: 100%;
     max-height: 80vh;
     position: relative;
     border-radius: 32px;
@@ -919,7 +916,6 @@ svg {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    width: 100%;
 }
 
 @media screen and (max-width: 991px) {
