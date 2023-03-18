@@ -1140,22 +1140,26 @@ svg {
     font-size: 30px;
 }
 
-.link-icon-wrapper {
+.link-tag {
+    position: relative;
     display: flex;
-    width: 4vw;
-    height: 4vh;
-    justify-content: center;
+    overflow: hidden;
+    margin-left: 4px;
+    padding: 6px 12px 5px;
+    justify-content: flex-start;
     align-items: center;
-    margin-left: 20px;
+    border-radius: 24px;
+    font-size: 11px;
+    text-transform: uppercase;
 }
 
-.icon {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    fill: currentColor;
-    stroke: currentColor;
-    stroke-width: 0.5px;
+.link-arrow {
+    display: flex;
+    width: 30px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 @media screen and (max-width: 991px) {
@@ -1419,17 +1423,6 @@ svg {
     .photo-projet-list {
         grid-column-gap: 32px;
     }
-    .dev-link {
-        font-size: 3vw;
-    }
-        .link-icon-wrapper {
-            display: flex;
-            width: 1.5em;
-            height: 1.5em;
-            justify-content: center;
-            align-items: center;
-            margin-left: 20px;
-        }
 }
 
 @media screen and (max-width: 767px) {
@@ -1631,10 +1624,6 @@ svg {
         padding-top: 192px;
         padding-bottom: 128px;
     }
-
-    .dev-link {
-        font-size: 4vw;
-    }
 }
 
 @media screen and (max-width: 479px) {
@@ -1790,9 +1779,5 @@ svg {
 
     .headline {
         font-size: 24vw;
-    }
-
-    .dev-link {
-        font-size: 5vw;
     }
 }
