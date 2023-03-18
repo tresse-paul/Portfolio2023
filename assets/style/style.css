@@ -876,6 +876,7 @@ svg {
 .projet-info-wrapper {
     height: 100%;
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     flex-wrap: nowrap;
     border-bottom: 1px solid currentColor;
@@ -888,6 +889,28 @@ svg {
     font-family: 'Mint Grotesk';
     font-weight: 500;
     font-size: 1em;
+}
+
+.info-tools {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+.tool-wrapper {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tool-img {
+    width: 100%;
+    height: 100%;
 }
 
 .presentation-title {
@@ -1375,6 +1398,10 @@ svg {
     .page-paragraph {
         font-size: 1.6em;
     }
+
+    .info-tools {
+        gap: 20px;
+    }
 }
 
 @media screen and (max-width: 479px) {
@@ -1514,5 +1541,9 @@ svg {
     .section.large-section {
         padding-top: 64px;
         padding-bottom: 64px;
+    }
+
+    .info-tools {
+        gap: 10px;
     }
 }

@@ -418,13 +418,13 @@ imageParallax.fromTo(
   {
     willChange: "transform",
     transform:
-      "translate3d(0%, -5%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
+      "translate3d(0%, -8%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
     transformStyle: "preserve-3d",
   },
   {
     willChange: "transform",
     transform:
-      "translate3d(0%, 5%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
+      "translate3d(0%, 8%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
     transformStyle: "preserve-3d",
   }
 );
