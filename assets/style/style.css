@@ -971,12 +971,19 @@ svg {
 }
 
 .parallax {
-    width: 100%;
-    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+}
+
+.parallax-projet {
+        width: 100%;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
 }
 
 .parallax-img {
@@ -1057,6 +1064,25 @@ svg {
     width: 100%;
     flex: 0 0 auto;
     object-fit: contain;
+}
+
+.carousel-section {
+    overflow: hidden;
+    padding-top: 128px;
+}
+
+.splide {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+
+.splide.is-initialized{
+    visibility: visible;
 }
 
 @media screen and (max-width: 991px) {
