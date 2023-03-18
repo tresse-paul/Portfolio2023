@@ -854,6 +854,10 @@ svg {
     margin-bottom: 100px;
 }
 
+.paragraph-wrapper.max-w {
+    max-width: 1000px;
+}
+
 .page-paragraph {
     font-family: 'Roslindale';
     font-size: 1.72em;
@@ -926,6 +930,40 @@ svg {
     z-index: 0;
 }
 
+.parallax-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+.padding {
+    padding-left: 64px;
+    padding-right: 64px;
+}
+
+.parallax {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.parallax-img {
+    width: 110%;
+    height: 110%;
+    position: relative;
+    object-fit: cover;
+}
+
+.paragraph-parallax {
+    text-align: center;
+}
+
 @media screen and (max-width: 991px) {
     h1 {
             font-size: 12vw
@@ -949,6 +987,11 @@ svg {
     }
 
     .wrapper {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    .padding {
         padding-left: 48px;
         padding-right: 48px;
     }
@@ -1179,6 +1222,11 @@ svg {
         padding-right: 32px;
     }
 
+    .padding {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
     .nav-menu-mobile {
         padding-top: 6px;
         padding-right: 38px;
@@ -1336,6 +1384,11 @@ svg {
     }
 
     .wrapper {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .padding {
         padding-left: 24px;
         padding-right: 24px;
     }

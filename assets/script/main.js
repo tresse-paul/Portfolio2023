@@ -400,3 +400,31 @@ image2Scroller.fromTo(
     transformStyle: "preserve-3d",
   }
 );
+
+// Animation parallax avec scrollTrigger
+const imageParallax = gsap.timeline({
+  paused: true,
+  ease: Power1.easeOut,
+  scrollTrigger: {
+    trigger: ".parallax-wrapper",
+    start: "top 100%",
+    scrub: true,
+    end: "bottom 0%",
+  },
+});
+
+imageParallax.fromTo(
+  ".parallax-img",
+  {
+    willChange: "transform",
+    transform:
+      "translate3d(0%, -5%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
+    transformStyle: "preserve-3d",
+  },
+  {
+    willChange: "transform",
+    transform:
+      "translate3d(0%, 5%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
+    transformStyle: "preserve-3d",
+  }
+);
