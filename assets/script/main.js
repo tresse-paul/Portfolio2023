@@ -21,6 +21,22 @@ let heroTitle = gsap.fromTo(
 );
 heroTitle.pause();
 
+//animation texte page annex
+let subtitlePage = gsap.fromTo(
+  ".page-paragraph",
+
+  {
+    opacity: "0",
+    ease: Power2,
+    immediateRender: false,
+  },
+  {
+    opacity: "1",
+    ease: Power2,
+  }
+);
+subtitlePage.pause();
+
 // fondu à l'affichage de la page (contenu apparait)
 function fadeOut() {
   gsap.to(".page-transition", {
@@ -66,6 +82,9 @@ document.addEventListener("DOMContentLoaded", function () {
   heroTitle.play();
   heroTitle.delay(1);
   heroTitle.duration(1);
+  subtitlePage.play();
+  subtitlePage.delay(1);
+  subtitlePage.duration(1);
 });
 
 // Changement theme sombe - clair
@@ -428,9 +447,9 @@ imageParallax.fromTo(
 );
 
 // Gallery animée
-let mm = gsap.matchMedia();
+let medium = gsap.matchMedia();
 
-mm.add("(min-width: 768px)", () => {
+medium.add("(min-width: 768px)", () => {
   const photoGallery = gsap.timeline({
     ease: Power1.easeOut,
     scrollTrigger: {

@@ -8,6 +8,14 @@
     padding-left: 64px;
 }
 
+.container.page-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .section {
     position: relative;
     width: 100%;
@@ -776,6 +784,11 @@ svg {
     align-items: center;
 }
 
+.header.page-header {
+    position: relative;
+    max-height: 1000px;
+}
+
 .header.template-header {
     height: auto;
     padding-top: 128px;
@@ -1066,23 +1079,43 @@ svg {
     object-fit: contain;
 }
 
-.carousel-section {
-    overflow: hidden;
-    padding-top: 128px;
-}
-
-.splide {
+.section-title {
     position: relative;
     display: flex;
-    width: 100%;
-    flex-direction: row;
+    max-width: 700px;
+    margin-right: auto;
+    margin-bottom: 64px;
+    margin-left: auto;
+    flex-direction: column;
     justify-content: flex-start;
-    flex-wrap: nowrap;
-    align-items: stretch;
+    align-items: center;
+    text-align: center;
 }
 
-.splide.is-initialized{
-    visibility: visible;
+.section-title.compact {
+    max-width: 600px;
+}
+
+.section-title:only-child {
+    margin-bottom: 0;
+}
+
+.section-title:last-child,
+.section-title:only-child {
+    margin-bottom: 0;
+}
+
+.headline {
+    position: relative;
+    margin-bottom: 0;
+    font-family: Roslindale, 'Times New Roman', sans-serif;
+    font-size: 180px;
+    text-transform: uppercase;
+}
+
+.headline.page-headline {
+    margin-bottom: 40px;
+    text-transform: capitalize;
 }
 
 @media screen and (max-width: 991px) {
@@ -1159,6 +1192,14 @@ svg {
 
     .translate{
         transform: translateY(0%);
+    }
+
+    .headline {
+        font-size: 25vw;
+    }
+
+    .headline.page-headline {
+        font-size: 23vw;
     }
 
     .nav-menu-grid-mobile {
@@ -1532,6 +1573,13 @@ svg {
         width: 100%;
         height: 100%;
     }
+
+    .header.page-header {
+        height: auto;
+        max-height: none;
+        padding-top: 192px;
+        padding-bottom: 128px;
+    }
 }
 
 @media screen and (max-width: 479px) {
@@ -1679,5 +1727,13 @@ svg {
 
     .photo-projet-list {
         grid-column-gap: 16px;
+    }
+
+    .header.page-header {
+        padding-bottom: 64px;
+    }
+
+    .headline {
+        font-size: 24vw;
     }
 }
