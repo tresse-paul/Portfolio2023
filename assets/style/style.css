@@ -46,7 +46,7 @@
     border-color: currentcolor;
     color: currentColor;
     transition: .3s cubic-bezier(.215, .61, .355, 1);
-    font-family: 'Mint Grotesk', sans-serif;
+    font-family: 'Neue', sans-serif;
     font-size: 11px;
     line-height: 1;
     text-align: center;
@@ -99,7 +99,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 16px;
-    font-family: Roslindale, 'Times New Roman', sans-serif;
+    font-family: 'Roslindale';
     font-size: 32px;
     line-height: 1;
     font-weight: 400;
@@ -899,7 +899,7 @@ svg {
 }
 
 .info-label {
-    font-family: 'Mint Grotesk';
+    font-family: 'Neue';
     font-weight: 500;
     font-size: 1em;
 }
@@ -1109,7 +1109,7 @@ svg {
 .headline {
     position: relative;
     margin-bottom: 0;
-    font-family: Roslindale, 'Times New Roman', sans-serif;
+    font-family: 'Roslindale';
     font-size: 180px;
     text-transform: uppercase;
 }

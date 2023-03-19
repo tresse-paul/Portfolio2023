@@ -5,6 +5,12 @@
     src: url('../font/Roslindale-DisplayCondensedRegular-Testing.woff2') format("woff2");
 }
 
+@font-face {
+    font-family: 'Neue Montreal';
+    font-weight: 500;
+    src: url('../font/ppneuemontreal-medium-webfont.woff2') format('woff2');
+}
+
 /* Mint Grotesk medium */
 @font-face {
     font-family: 'Mint Grotesk';
