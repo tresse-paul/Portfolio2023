@@ -1304,6 +1304,47 @@ svg {
     font-size: 1.6em;
 }
 
+.header.about-header {
+    position: relative;
+    height: auto;
+    padding-top: 222px;
+    padding-bottom: 64px;
+}
+
+.section-title.max-width {
+    max-width: 800px;
+}
+
+.section-title:only-child {
+    margin-bottom: 0;
+}
+
+.section-title:last-child,
+.section-title:only-child {
+    margin-bottom: 0;
+}
+
+.headline {
+    position: relative;
+    margin-bottom: 0;
+    font-family: "Roslindale";
+    font-size: 180px;
+    text-transform: uppercase;
+}
+
+.headline.paul {
+    z-index: 3;
+}
+
+.headline.about.tresse {
+    z-index: 1;
+}
+
+.headline.about {
+    line-height: .9em;
+    text-transform: capitalize;
+}
+
 @media screen and (max-width: 991px) {
     * {
         cursor: auto;

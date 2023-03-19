@@ -317,6 +317,13 @@ img {
         --scaler: 6vw;
         height: clamp( var(--minFontSize), var(--scaler), var(--maxFontSize));
     }
+
+    .headline {
+        --minFontSize: 150px;
+        --maxFontSize: 180px;
+        --scaler: 13vw;
+        font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+    }
 }
 
 /* Effet hover sur button */

@@ -566,24 +566,13 @@ Object.keys(breakpoints).forEach((breakpoint) => {
 // Select slider elements
 const slider = document.querySelector("#slider-track");
 const sliderInner = document.querySelector("#slider-list");
-const sliderItems = document.querySelectorAll(".slide-card");
+const cards = document.querySelectorAll(".slide-card");
 
 // Initialize GSAP Draggable plugin
 gsap.registerPlugin(Draggable);
 
-// Calculate slider width and item width based on screen width
-const screenWidth = window.innerWidth;
-let itemsPerView = 1;
-if (screenWidth >= 478) {
-  itemsPerView = 2;
-}
-if (screenWidth >= 767) {
-  itemsPerView = 3;
-}
-const itemWidth = screenWidth / itemsPerView;
-
 // Set initial position of slider
-let position = -itemWidth * itemsPerView;
+let position = -cards[0].offsetLeft;
 gsap.set(sliderInner, { x: position });
 
 // Create Draggable instance for slider
@@ -591,7 +580,7 @@ const draggable = Draggable.create(sliderInner, {
   type: "x",
   edgeResistance: 0.5,
   bounds: {
-    minX: -itemWidth * (sliderItems.length - itemsPerView),
+    minX: -cards[cards.length - 1].offsetLeft,
     maxX: 0,
   },
   onDragEnd: updatePosition,
@@ -599,33 +588,21 @@ const draggable = Draggable.create(sliderInner, {
 
 // Update position of slider on drag end
 function updatePosition() {
-  position = gsap.getProperty(sliderInner, "x");
-  if (position < -itemWidth * (sliderItems.length - itemsPerView)) {
-    gsap.set(sliderInner, { x: position + itemWidth * sliderItems.length });
-  } else if (position > 0) {
-    gsap.set(sliderInner, {
-      x: position - itemWidth * sliderItems.length,
-    });
-  }
-}
+  // Get current position of slider
+  const currentPosition = -sliderInner.getBoundingClientRect().left;
 
-// Update slider and item widths on window resize
-window.addEventListener("resize", () => {
-  const screenWidth = window.innerWidth;
-  let itemsPerView = 1;
-  if (screenWidth >= 478) {
-    itemsPerView = 2;
-  }
-  if (screenWidth >= 767) {
-    itemsPerView = 3;
-  }
-  const itemWidth = screenWidth / itemsPerView;
+  // Loop through each card and check if it's in the center
+  cards.forEach((card) => {
+    const cardLeft = card.getBoundingClientRect().left;
+    const cardRight = cardLeft + card.offsetWidth;
 
-  gsap.set(sliderInner, { x: position });
-  gsap.set(sliderItems, { width: itemWidth });
-  gsap.set(sliderInner, { width: itemWidth * sliderItems.length });
-  draggable[0].applyBounds({
-    minX: -itemWidth * (sliderItems.length - itemsPerView),
-    maxX: 0,
+    // If card is in center, animate to center position
+    if (cardLeft < currentPosition && cardRight > currentPosition) {
+      gsap.to(sliderInner, {
+        duration: 0.3,
+        x: -card.offsetLeft,
+        ease: "power3.inOut",
+      });
+    }
   });
-});
+}
