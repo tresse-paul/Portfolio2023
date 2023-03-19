@@ -499,3 +499,64 @@ medium.add("(min-width: 768px)", () => {
     }
   );
 });
+
+//media queries des card carousel projet
+
+// Récupérer l'élément HTML à modifier
+const slideCard = document.querySelectorAll(".slide-card");
+
+// Créer des règles de largeur pour différents points de rupture d'écran
+const breakpoints = {
+  xs: "(max-width: 478px)",
+  sm: "(min-width: 479px) and (max-width: 766px)",
+  md: "(min-width: 767px) and (max-width: 990px)",
+  lg: "(min-width: 991px)",
+};
+
+// Pour chaque règle de largeur, ajouter un écouteur d'événement pour modifier la largeur de l'élément
+Object.keys(breakpoints).forEach((breakpoint) => {
+  const mediaQuery = window.matchMedia(breakpoints[breakpoint]);
+
+  // Définir la largeur de l'élément en fonction du point de rupture de l'écran
+  const setElementStyle = () => {
+    if (mediaQuery.matches) {
+      switch (breakpoint) {
+        case "xs":
+          slideCard.forEach((e) => {
+            e.style.width = "calc(((100% + 16px) / 1) - 16px)";
+            e.style.marginRight = "16px";
+          });
+          break;
+        case "sm":
+          slideCard.forEach((e) => {
+            e.style.width = "calc(((100% + 16px) / 2) - 16px)";
+            e.style.marginRight = "16px";
+          });
+          break;
+        case "md":
+          slideCard.forEach((e) => {
+            e.style.width = "calc(((100% + 16px) / 3) - 16px)";
+            e.style.marginRight = "16px";
+          });
+          break;
+        case "lg":
+          slideCard.forEach((e) => {
+            e.style.width = "calc(((100% + 16px) / 3) - 16px)";
+            e.style.marginRight = "16px";
+          });
+          break;
+        default:
+          slideCard.forEach((e) => {
+            e.style.width = "calc(((100% + 16px) / 3) - 16px)";
+            e.style.marginRight = "16px";
+          });
+      }
+    }
+  };
+
+  // Ajouter l'écouteur d'événement pour chaque règle de largeur
+  mediaQuery.addListener(setElementStyle);
+
+  // Définir la largeur initiale de l'élément
+  setElementStyle();
+});
