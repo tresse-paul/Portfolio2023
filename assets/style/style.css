@@ -1304,6 +1304,10 @@ svg {
 }
 
 @media screen and (max-width: 991px) {
+    * {
+        cursor: auto;
+    }
+
     h1 {
             font-size: 12vw
     }

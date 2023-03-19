@@ -560,3 +560,70 @@ Object.keys(breakpoints).forEach((breakpoint) => {
   // Définir la largeur initiale de l'élément
   setElementStyle();
 });
+
+//slider infini fonction draggable et snap
+
+// Select slider elements
+const slider = document.querySelector("#slider-track");
+const sliderInner = document.querySelector("#slider-list");
+const sliderItems = document.querySelectorAll(".slide-card");
+
+// Initialize GSAP Draggable plugin
+gsap.registerPlugin(Draggable);
+
+// Calculate slider width and item width based on screen width
+const screenWidth = window.innerWidth;
+let itemsPerView = 1;
+if (screenWidth >= 478) {
+  itemsPerView = 2;
+}
+if (screenWidth >= 767) {
+  itemsPerView = 3;
+}
+const itemWidth = screenWidth / itemsPerView;
+
+// Set initial position of slider
+let position = -itemWidth * itemsPerView;
+gsap.set(sliderInner, { x: position });
+
+// Create Draggable instance for slider
+const draggable = Draggable.create(sliderInner, {
+  type: "x",
+  edgeResistance: 0.5,
+  bounds: {
+    minX: -itemWidth * (sliderItems.length - itemsPerView),
+    maxX: 0,
+  },
+  onDragEnd: updatePosition,
+});
+
+// Update position of slider on drag end
+function updatePosition() {
+  position = gsap.getProperty(sliderInner, "x");
+  if (position < -itemWidth * (sliderItems.length - itemsPerView)) {
+    gsap.set(sliderInner, { x: position + itemWidth * sliderItems.length });
+  } else if (position > 0) {
+    gsap.set(sliderInner, { x: position - itemWidth * sliderItems.length });
+  }
+}
+
+// Update slider and item widths on window resize
+window.addEventListener("resize", () => {
+  const screenWidth = window.innerWidth;
+  let itemsPerView = 1;
+  if (screenWidth >= 478) {
+    itemsPerView = 2;
+  }
+  if (screenWidth >= 767) {
+    itemsPerView = 3;
+  }
+  const itemWidth = screenWidth / itemsPerView;
+
+  gsap.set(sliderInner, { x: position });
+  gsap.set(sliderItems, { width: itemWidth });
+  gsap.set(sliderInner, { width: itemWidth * sliderItems.length });
+  draggable[0].applyBounds({
+    minX: -itemWidth * (sliderItems.length - itemsPerView),
+    maxX: 0,
+  });
+});
