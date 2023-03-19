@@ -603,7 +603,9 @@ function updatePosition() {
   if (position < -itemWidth * (sliderItems.length - itemsPerView)) {
     gsap.set(sliderInner, { x: position + itemWidth * sliderItems.length });
   } else if (position > 0) {
-    gsap.set(sliderInner, { x: position - itemWidth * sliderItems.length });
+    gsap.set(sliderInner, {
+      x: position - itemWidth * sliderItems.length,
+    });
   }
 }
 
