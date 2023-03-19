@@ -23,7 +23,7 @@ heroTitle.pause();
 
 //animation texte page annex
 let subtitlePage = gsap.fromTo(
-  ".page-paragraph",
+  "#projet-subtitle",
 
   {
     opacity: "0",
@@ -447,14 +447,14 @@ imageParallax.fromTo(
   }
 );
 
-//animate About title
+//animation img title et titre section a propos
 const aboutTitle = gsap.timeline({
   ease: Power1.easeOut,
   scrollTrigger: {
-    trigger: ".bout-header",
+    trigger: ".about-header",
     start: "top",
     scrub: true,
-    end: "bottom 0%",
+    end: "bottom 80%",
   },
 });
 
@@ -469,6 +469,51 @@ aboutTitle.fromTo(
     willChange: "transform",
     y: "160%",
     transformStyle: "preserve-3d",
+  }
+);
+
+const aboutPortrait = gsap.timeline({
+  ease: Power1.easeOut,
+  scrollTrigger: {
+    trigger: ".about-header",
+    start: "top",
+    scrub: true,
+    end: "top 20%",
+  },
+});
+
+aboutPortrait.fromTo(
+  ".about-img-container",
+  {
+    willChange: "transform",
+    y: "0%",
+    transformStyle: "preserve-3d",
+  },
+  {
+    willChange: "transform",
+    y: "-5%",
+    transformStyle: "preserve-3d",
+  }
+);
+
+//animation subtitle section à propos
+const aboutSubtitle = gsap.timeline({
+  ease: Power1.easeOut,
+  scrollTrigger: {
+    trigger: "#about-subtitle",
+    start: "top 50%",
+    scrub: true,
+    end: "bottom 50%",
+  },
+});
+
+aboutSubtitle.fromTo(
+  "#about-subtitle",
+  {
+    opacity: 0,
+  },
+  {
+    opacity: "1",
   }
 );
 
