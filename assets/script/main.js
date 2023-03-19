@@ -89,13 +89,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Changement theme sombe - clair
 // Transition du texte
-const btnMode = document.querySelectorAll(".button.mode");
+// const btnMode = document.querySelectorAll(".button.mode");
 
-btnMode.forEach((item) => {
-  var body = document.body;
-  item.addEventListener("click", () => {
-    body.classList.toggle("light-mode");
-  });
+// btnMode.forEach((item) => {
+//   var body = document.body;
+//   item.addEventListener("click", () => {
+//     body.classList.toggle("light-mode");
+//   });
+// });
+
+// on click of the theme switcher, set local storage item and update CSS
+let myTimeout;
+$(".button.mode").on("click", function () {
+  clearTimeout(myTimeout);
+  $("html").addClass("transition");
+  myTimeout = setTimeout(() => {
+    $("html").removeClass("transition");
+  }, 750);
+  $("html").toggleClass("light-mode");
+  if ($("html").hasClass("light-mode")) {
+    localStorage.setItem("light-mode", "true");
+  } else {
+    localStorage.removeItem("light-mode");
+  }
 });
 
 // Transition du label du boutton menu + apparition de la nav
@@ -134,7 +150,7 @@ const openNav = () => {
   animateOpenNav();
   const btnMenu = document.querySelector(".menu-button");
   btnMenu.addEventListener("click", function (e) {
-    btnMenu.classList.toggle("transition");
+    btnMenu.classList.toggle("transi");
     tl.reversed(!tl.reversed());
   });
 };

@@ -14,7 +14,7 @@
     --light: #e8e5f0;
 }
 
-/* TRANSITIONS */
+/* TRANSITIONS
 .light-mode {
     background-color: var(--light);
     color: var(--dark);
@@ -48,6 +48,85 @@
 
 .transition .mobile-button-text{
     transform: translateY(-100%);
+} */
+
+/* SET VARIABLES */
+:root {
+    --transition-speed: 500ms;
+    --dark: #1a4572;
+    --light: #e8e5f0;
+}
+
+/* SET TRANSITION */
+.transition body {
+    transition: color var(--transition-speed), background-color var(--transition-speed) !important;
+    transition-timing-function: ease;
+}
+
+.page-transition {
+    position: fixed;
+    top: 0;
+    z-index: 8888;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0e1012;
+    cursor: wait;
+}
+
+.transi .mobile-button-text {
+    transform: translateY(-100%);
+}
+
+/* SET STYLES */
+.nav-background {
+    transition: color var(--transition-speed), background-color var(--transition-speed) !important;
+    transition-timing-function: ease;
+}
+
+.light-mode :is(body) {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.light-mode :is(.toggle) {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.light-mode .nav-background {
+    background-color: var(--light);
+    opacity: 0.75;
+    transition: color var(--transition-speed), background-color var(--transition-speed) !important;
+    transition-timing-function: ease;
+}
+
+.light-mode .mode-text {
+    transform: translateY(-100%);
+}
+
+.light-mode .photo-case-anchor-overlay {
+    background-color: var(--light);
+}
+
+.light-mode :is(.bg, .page-transition) {
+    background-color: white;
+}
+
+.light-mode .video-card-gradient {
+    background-image: linear-gradient(to right, #e8e5f0, #e8e5f0 20%, #e8e5f0 80%, #e8e5f0) !important;
+}
+
+.light-mode .about-divider {
+    opacity: .16;
+}
+
+.light-mode .headline.about {
+    mix-blend-mode: multiply;
 }
 
 html {
