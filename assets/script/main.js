@@ -501,9 +501,9 @@ const aboutSubtitle = gsap.timeline({
   ease: Power1.easeOut,
   scrollTrigger: {
     trigger: "#about-subtitle",
-    start: "top 50%",
+    start: "top 70%",
     scrub: true,
-    end: "bottom 50%",
+    end: "bottom center",
   },
 });
 
@@ -514,6 +514,57 @@ aboutSubtitle.fromTo(
   },
   {
     opacity: "1",
+  }
+);
+
+//Animation page contact
+const contactImgLeft = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".contact-item",
+    start: "top center",
+    scrub: true,
+    end: "bottom 100%",
+  },
+});
+
+contactImgLeft.fromTo(
+  ".contact-img-wrapper.img.left",
+  {
+    willChange: "transform",
+    transformStyle: "preserve-3d",
+    x: "84%",
+    rotateZ: 0,
+  },
+  {
+    willChange: "transform",
+    transformStyle: "preserve-3d",
+    x: "0%",
+    rotateZ: -3,
+  }
+);
+
+const contactImgRight = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".contact-item",
+    start: "top center",
+    scrub: true,
+    end: "bottom 100%",
+  },
+});
+
+contactImgRight.fromTo(
+  ".contact-img-wrapper.img.right",
+  {
+    willChange: "transform",
+    transformStyle: "preserve-3d",
+    x: "-96%",
+    rotateZ: 0,
+  },
+  {
+    willChange: "transform",
+    transformStyle: "preserve-3d",
+    x: "0%",
+    rotateZ: 3,
   }
 );
 
