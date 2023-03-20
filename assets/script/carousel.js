@@ -5,14 +5,14 @@ const slider = document.querySelector("#slider-track");
 const sliderInner = document.querySelector("#slider-list");
 const cards = document.querySelectorAll(".slide-card");
 
-// Initialize GSAP Draggable plugin
+// importation plugin Draggable Gsap
 gsap.registerPlugin(Draggable);
 
 // Set initial position of slider
 let position = -cards[0].offsetLeft;
 gsap.set(sliderInner, { x: position });
 
-// Create Draggable instance for slider
+// Fonction draggable
 const draggable = Draggable.create(sliderInner, {
   type: "x",
   edgeResistance: 0.5,
@@ -23,17 +23,17 @@ const draggable = Draggable.create(sliderInner, {
   onDragEnd: updatePosition,
 });
 
-// Update position of slider on drag end
+// Met à jour la possition au drag
 function updatePosition() {
   // Get current position of slider
   const currentPosition = -sliderInner.getBoundingClientRect().left;
 
-  // Loop through each card and check if it's in the center
+  // met en place les cards
   cards.forEach((card) => {
     const cardLeft = card.getBoundingClientRect().left;
     const cardRight = cardLeft + card.offsetWidth;
 
-    // If card is in center, animate to center position
+    // centre les card
     if (cardLeft < currentPosition && cardRight > currentPosition) {
       gsap.to(sliderInner, {
         duration: 0.3,

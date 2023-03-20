@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //   });
 // });
 
-// on click of the theme switcher, set local storage item and update CSS
+// Au clic sur sur le theme switcher, applique les styles css et le localStorage
 let myTimeout;
 $(".button.mode").on("click", function () {
   clearTimeout(myTimeout);
